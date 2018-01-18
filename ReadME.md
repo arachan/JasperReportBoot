@@ -5,6 +5,8 @@ This Program make PDF View Form JRXML template.
 This is Spring Boot Program.
 So, execute any where and nothing Servlet Container.
 
+Gradle Build Version
+
 ## How to execute
 
 1. Git Clone to STS(Spring Tools Suite)
@@ -34,6 +36,8 @@ JasperBoot 日本語
 JRXML TemplateからPDFを表示するためのプログラム。
 Spring Bootで出来てます。
 サーブレットコンテナなしでどこでも実行可能です。
+
+Gradle Build　バージョン
 
 ## 起動方法 
 
