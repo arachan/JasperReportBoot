@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
@@ -27,6 +29,8 @@ public class pdfController {
 
 	@Autowired
     ApplicationContext context;
+	
+	private static final Logger LOG = LoggerFactory.getLogger(pdfController.class);
     	
 	@GetMapping(path = "pdf/{jrxml}")
 	@ResponseBody
@@ -38,6 +42,9 @@ public class pdfController {
         JasperReport report=JasperCompileManager.compileReport(inputStream);		
 		//Parameters Set
         Map<String, Object> params = new HashMap<>();
+        
+        // Logging
+        LOG.info("Template is [{}]", jrxml);  
         
         //Data source Set
         JRDataSource dataSource = new JREmptyDataSource();
