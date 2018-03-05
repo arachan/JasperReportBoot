@@ -1,11 +1,9 @@
 buildscript {
 	ext {
-		springBootVersion = '2.0.0.M7'
+		springBootVersion = '2.0.0.RELEASE'
 	}
 	repositories {
 		mavenCentral()
-		maven { url "https://repo.spring.io/snapshot" }
-		maven { url "https://repo.spring.io/milestone" }
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -23,8 +21,6 @@ sourceCompatibility = 1.8
 
 repositories {
 	mavenCentral()
-	maven { url "https://repo.spring.io/snapshot" }
-	maven { url "https://repo.spring.io/milestone" }
 	// For JasperReports extention Library
 	maven { url "http://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/"}
 }
