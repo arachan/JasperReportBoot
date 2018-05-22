@@ -17,6 +17,7 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'com.jasper'
 version = '0.0.1-SNAPSHOT'
+//sourceCompatibility = 10
 sourceCompatibility = 1.8
 
 repositories {
@@ -29,11 +30,15 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.5.1'
+	// Groovy. JasperReport Template need groovy.
+	// compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.0-alpha-2', ext: 'pom'
 	compile group: 'org.codehaus.groovy', name: 'groovy-all'
 	// DejaVu Font extensions
 	// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts
 	compile group: 'net.sf.jasperreports', name: 'jasperreports-fonts', version: '6.0.0'
+	// https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
+	// compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'	
 	compile('org.springframework.boot:spring-boot-starter-actuator')
-	//compile('org.springframework.boot:spring-boot-actuator-docs')
+	// compile('org.springframework.boot:spring-boot-actuator-docs')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
