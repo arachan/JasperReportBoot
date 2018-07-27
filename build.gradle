@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.0.2.RELEASE'
+		springBootVersion = '2.0.3.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -29,7 +29,7 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.5.1'
+	compile group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.6.0'
 	// Groovy. JasperReport Template need groovy.
 	// compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.0-alpha-2', ext: 'pom'
 	compile group: 'org.codehaus.groovy', name: 'groovy-all'
