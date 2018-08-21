@@ -1,9 +1,13 @@
 buildscript {
-	ext {
-		springBootVersion = '2.0.3.RELEASE'
+	ext {	
+		//springBootVersion = '2.0.4.RELEASE'
+		springBootVersion = '2.1.0.M1'
 	}
 	repositories {
 		mavenCentral()
+		//For Spring Milestone
+		maven { url "https://repo.spring.io/snapshot" }
+		maven { url "https://repo.spring.io/milestone" }
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -24,20 +28,18 @@ repositories {
 	mavenCentral()
 	// For JasperReports extention Library
 	maven { url "http://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/"}
+	//For Spring Milestone
+	maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
 }
 
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.6.0'
-	// Groovy. JasperReport Template need groovy.
-	// compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.0-alpha-2', ext: 'pom'
-	compile group: 'org.codehaus.groovy', name: 'groovy-all'
 	// DejaVu Font extensions
 	// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts
-	compile group: 'net.sf.jasperreports', name: 'jasperreports-fonts', version: '6.0.0'
-	// https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
-	// compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'	
+	compile group: 'net.sf.jasperreports', name: 'jasperreports-fonts', version: '6.0.0'	
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	// compile('org.springframework.boot:spring-boot-actuator-docs')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
