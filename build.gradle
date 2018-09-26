@@ -33,9 +33,14 @@ repositories {
 	maven { url "https://repo.spring.io/milestone" }
 }
 
+configurations {
+	compile.exclude module: 'spring-boot-starter-tomcat'
+}
+
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile 'org.springframework.boot:spring-boot-starter-undertow'
 	compile group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.6.0'
 	// DejaVu Font extensions
 	// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts
