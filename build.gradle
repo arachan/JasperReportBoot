@@ -1,7 +1,7 @@
 buildscript {
 	ext {	
 		//springBootVersion = '2.0.4.RELEASE'
-		springBootVersion = '2.1.0.M2'
+		springBootVersion = '2.1.0.M4'
 	}
 	repositories {
 		mavenCentral()
@@ -41,7 +41,7 @@ configurations {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile 'org.springframework.boot:spring-boot-starter-undertow'
-	compile group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.6.0'
+	compile group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.7.0'
 	// DejaVu Font extensions
 	// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts
 	compile group: 'net.sf.jasperreports', name: 'jasperreports-fonts', version: '6.0.0'	
