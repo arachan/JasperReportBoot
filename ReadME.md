@@ -35,3 +35,4 @@ Unn....
 
 Apache License 2.0
 
+[![Known Vulnerabilities](https://snyk.io/test/github/arachan/JasperReportBoot/badge.svg?targetFile=build.gradle)](https://snyk.io/test/github/arachan/JasperReportBoot?targetFile=build.gradle)
