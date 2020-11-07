@@ -1,30 +1,16 @@
-buildscript {
-	ext {	
-		springBootVersion = '2.1.1.RELEASE'
-		//springBootVersion = '2.1.0.M4'
-		//springBootVersion = '2.1.0.RC1'
-	}
-	repositories {
-		mavenCentral()
-		//For Spring Milestone
-		//maven { url "https://repo.spring.io/snapshot" }
-		//maven { url "https://repo.spring.io/milestone" }
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+plugins {
+	id 'org.springframework.boot' version '2.3.5.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
 }
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
 
 group = 'com.jasper'
 version = '0.0.1-SNAPSHOT'
-//sourceCompatibility = 10
-//sourceCompatibility = 11
-sourceCompatibility = 1.8
+
+java{
+	sourceCompatibility = JavaVersion.VERSION_11
+	targetCompatibility = JavaVersion.VERSION_11
+}
 
 repositories {
 	mavenCentral()
@@ -35,19 +21,29 @@ repositories {
 	//maven { url "https://repo.spring.io/milestone" }
 }
 
-configurations {
-	compile.exclude module: 'spring-boot-starter-tomcat'
-}
-
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-web')
-	compile 'org.springframework.boot:spring-boot-starter-undertow'
-	compile group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.7.0'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//JasperReport Library
+	implementation 'net.sf.jasperreports:jasperreports:6.15.0'
 	// DejaVu Font extensions
 	// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts
-	compile group: 'net.sf.jasperreports', name: 'jasperreports-fonts', version: '6.0.0'	
-	compile('org.springframework.boot:spring-boot-starter-actuator')
-	// compile('org.springframework.boot:spring-boot-actuator-docs')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+	// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts
+	implementation 'net.sf.jasperreports:jasperreports-fonts:6.16.0'
+	// https://mvnrepository.com/artifact/xerces/xercesImpl
+	// protected An illegal reflective access operation. for jasperreports
+	implementation 'xerces:xercesImpl:2.12.0'
+	//testCompile('org.springframework.boot:spring-boot-starter-test')
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
+
+//fully executable On Unix like platforms
+bootJar {
+	launchScript()
 }
