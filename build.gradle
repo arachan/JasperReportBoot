@@ -19,6 +19,8 @@ repositories {
 	//For Spring Milestone
 	//maven { url "https://repo.spring.io/snapshot" }
 	//maven { url "https://repo.spring.io/milestone" }
+	//For JBoss Public
+	maven { url "https://repository.jboss.org/nexus/content/repositories/public/" }
 }
 
 
@@ -28,11 +30,11 @@ dependencies {
 	implementation 'net.sf.jasperreports:jasperreports:6.15.0'
 	// DejaVu Font extensions
 	// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts
-	// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts
 	implementation 'net.sf.jasperreports:jasperreports-fonts:6.16.0'
 	// https://mvnrepository.com/artifact/xerces/xercesImpl
 	// protected An illegal reflective access operation. for jasperreports
-	implementation 'xerces:xercesImpl:2.12.0'
+	// 2.12.0.PS06 from JBoss Public
+	implementation 'xerces:xercesImpl:2.12.0.SP06'
 	//testCompile('org.springframework.boot:spring-boot-starter-test')
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
