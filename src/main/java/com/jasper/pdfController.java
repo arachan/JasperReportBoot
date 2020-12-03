@@ -2,8 +2,12 @@ package com.jasper;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Date;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
+
 import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
@@ -14,6 +18,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -63,17 +68,22 @@ public class pdfController {
      */    
 	@GetMapping(path = "pdf/{jrxml}")
 	@ResponseBody
-    public void getPdf(@PathVariable String jrxml ,HttpServletResponse response) throws IOException, JRException {
-		//Get JRXML template from resources folder
+    public void getPdf(@PathVariable String jrxml,@RequestParam("no") Optional<Integer> no,@RequestParam("date") Optional<Date> date, HttpServletResponse response) throws IOException, JRException, ClassNotFoundException, SQLException{
 		Resource resource = context.getResource("classpath:jasperreports/"+jrxml+".jrxml");
         //Compile to jasperReport
         InputStream inputStream = resource.getInputStream();
         JasperReport report=JasperCompileManager.compileReport(inputStream);		
-		//Parameters Set
+
+        //Parameters Set
         Map<String, Object> params = new HashMap<>();
+        Deadline deadline=new Deadline();
+        params=deadline.getParameter();
+        params.put("no", no.orElse(null));
+        params.put("date", date.orElse(null));
         
-        // Logging
-        LOG.info("Template is [{}]", jrxml);  
+        //LOG
+        LOG.info("Template is [{}]. params is [{}] date is [{}]", jrxml,params,deadline.nowdate);
+
         
         //Data source Set
         JRDataSource dataSource = new JREmptyDataSource();
