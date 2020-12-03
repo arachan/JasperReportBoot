@@ -27,9 +27,11 @@ For example
 3. browser access to http://localhost:8080/pdf/test 
 4. view PDF from test.jrxml
 
-## Prarameter?
+## Prarameter
 
-Unn....
+make RequestParam.
+
+I add no and date parameter.
 
 ## License
 
