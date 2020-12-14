@@ -5,4 +5,7 @@
   "labels": [
     "dependencies"
   ]
+  "ignoreDeps": [
+    "xerces:xercesImpl"
+  ]
 }
