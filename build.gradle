@@ -19,8 +19,6 @@ repositories {
 	//For Spring Milestone
 	//maven { url "https://repo.spring.io/snapshot" }
 	//maven { url "https://repo.spring.io/milestone" }
-	//For JBoss Public
-	//maven { url "https://repository.jboss.org/nexus/content/repositories/public/" }
 }
 
 
@@ -42,9 +40,14 @@ dependencies {
 	// this for barcode4j is vulnerabilities
 	// https://mvnrepository.com/artifact/junit/junit
 	implementation 'junit:junit:4.13.2'
+	// this is vulnerabilities for net.sf.jasperreports:jasperreports@6.17.0 
+	// https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on
+	implementation 'org.bouncycastle:bcprov-jdk15on:1.68'
+	// this is vulnerabilities for batik-bridge@1.14
+	// https://mvnrepository.com/artifact/commons-io/commons-io
+	implementation 'commons-io:commons-io:2.8.0'
 	// https://mvnrepository.com/artifact/xerces/xercesImpl
 	// protected An illegal reflective access operation. for jasperreports
-	// 2.12.0.PS06 from JBoss Public
 	implementation 'xerces:xercesImpl:2.12.1'
 	//testCompile('org.springframework.boot:spring-boot-starter-test')
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
