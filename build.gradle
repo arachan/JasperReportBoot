@@ -45,7 +45,7 @@ dependencies {
 	// https://mvnrepository.com/artifact/xerces/xercesImpl
 	// protected An illegal reflective access operation. for jasperreports
 	// 2.12.0.PS06 from JBoss Public
-	//implementation 'xerces:xercesImpl:2.12.0.SP06'
+	implementation 'xerces:xercesImpl:2.12.1'
 	//testCompile('org.springframework.boot:spring-boot-starter-test')
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
