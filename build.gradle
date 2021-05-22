@@ -51,7 +51,6 @@ dependencies {
 	implementation 'xerces:xercesImpl:2.12.1'
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	}
 }
 
 test {
