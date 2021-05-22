@@ -20,7 +20,7 @@ repositories {
 	//maven { url "https://repo.spring.io/snapshot" }
 	//maven { url "https://repo.spring.io/milestone" }
 	//For JBoss Public
-	maven { url "https://repository.jboss.org/nexus/content/repositories/public/" }
+	//maven { url "https://repository.jboss.org/nexus/content/repositories/public/" }
 }
 
 
@@ -38,7 +38,7 @@ dependencies {
 	implementation 'org.apache.xmlgraphics:batik-bridge:1.14'
 	// this for barcode4j is vulnerabilities
 	// https://mvnrepository.com/artifact/org.apache.ant/ant
-	//implementation 'org.apache.ant:ant:1.10.10'
+	implementation 'org.apache.ant:ant:1.10.10'
 	// this for barcode4j is vulnerabilities
 	// https://mvnrepository.com/artifact/junit/junit
 	implementation 'junit:junit:4.13.2'
