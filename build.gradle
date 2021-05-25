@@ -45,7 +45,7 @@ dependencies {
 	implementation 'org.bouncycastle:bcprov-jdk15on:1.68'
 	// this is vulnerabilities for batik-bridge@1.14
 	// https://mvnrepository.com/artifact/commons-io/commons-io
-	implementation 'commons-io:commons-io:2.8.0'
+	implementation 'commons-io:commons-io:2.9.0'
 	// https://mvnrepository.com/artifact/xerces/xercesImpl
 	// protected An illegal reflective access operation. for jasperreports
 	implementation 'xerces:xercesImpl:2.12.1'
