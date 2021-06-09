@@ -42,7 +42,7 @@ dependencies {
 	implementation 'junit:junit:4.13.2'
 	// this is vulnerabilities for net.sf.jasperreports:jasperreports@6.17.0 
 	// https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on
-	implementation 'org.bouncycastle:bcprov-jdk15on:1.68'
+	implementation 'org.bouncycastle:bcprov-jdk15on:1.69'
 	// this is vulnerabilities for batik-bridge@1.14
 	// https://mvnrepository.com/artifact/commons-io/commons-io
 	implementation 'commons-io:commons-io:2.9.0'
