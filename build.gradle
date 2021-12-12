@@ -21,6 +21,9 @@ repositories {
 	//maven { url "https://repo.spring.io/milestone" }
 }
 
+// log4j2
+// https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2314719
+ext['log4j2.version'] = '2.15.0'
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
