@@ -23,7 +23,7 @@ repositories {
 
 // log4j2
 // https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2314719
-ext['log4j2.version'] = '2.17.0'
+ext['log4j2.version'] = '2.17.1'
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
