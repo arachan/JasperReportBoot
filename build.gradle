@@ -31,7 +31,7 @@ dependencies {
 	implementation 'net.sf.jasperreports:jasperreports:6.19.1'
 	// DejaVu Font extensions
 	// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts
-	implementation 'net.sf.jasperreports:jasperreports-fonts:6.19.0'
+	implementation 'net.sf.jasperreports:jasperreports-fonts:6.19.1'
 	// https://mvnrepository.com/artifact/net.sf.barcode4j/barcode4j
 	implementation 'net.sf.barcode4j:barcode4j:2.1'
 	// https://mvnrepository.com/artifact/org.apache.xmlgraphics/batik-bridge
