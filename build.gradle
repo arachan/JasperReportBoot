@@ -39,7 +39,7 @@ dependencies {
 	implementation 'org.apache.xmlgraphics:batik-bridge:1.16'
 	// this for barcode4j is vulnerabilities
 	// https://mvnrepository.com/artifact/org.apache.ant/ant
-	implementation 'org.apache.ant:ant:1.10.12'
+	implementation 'org.apache.ant:ant:1.10.13'
 	// this for barcode4j is vulnerabilities
 	// https://mvnrepository.com/artifact/junit/junit
 	implementation 'junit:junit:4.13.2'
