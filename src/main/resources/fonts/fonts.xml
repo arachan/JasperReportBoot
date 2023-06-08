@@ -20,5 +20,12 @@
         <pdfEncoding>Identity-H</pdfEncoding>
         <pdfEmbedded>true</pdfEmbedded>
     </fontFamily>
- 
+
+    <!--  Bengali font support  -->
+    <fontFamily name="SolaimanLipi">
+        <normal><![CDATA[fonts/SolaimanLipi/SolaimanLipi_22-02-2012.ttf]]></normal>
+        <bold><![CDATA[fonts/SolaimanLipi/SolaimanLipi_Bold_10-03-12.ttf]]></bold>
+        <pdfEncoding><![CDATA[Identity-H]]></pdfEncoding>
+        <pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+    </fontFamily>
 </fontFamilies>
