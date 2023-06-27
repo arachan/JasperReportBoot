@@ -29,6 +29,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	//JasperReport Library
 	implementation 'net.sf.jasperreports:jasperreports:6.20.5'
+	// https://mvnrepository.com/artifact/com.github.librepdf/openpdf
+	// for jasperreports
+	implementation 'com.github.librepdf:openpdf:1.3.30'
 	// DejaVu Font extensions
 	// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts
 	implementation 'net.sf.jasperreports:jasperreports-fonts:6.20.5'
