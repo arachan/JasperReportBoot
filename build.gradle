@@ -54,7 +54,7 @@ dependencies {
 	implementation 'commons-io:commons-io:2.13.0'
 	// https://mvnrepository.com/artifact/xerces/xercesImpl
 	// protected An illegal reflective access operation. for jasperreports
-	implementation 'xerces:xercesImpl:2.12.1'
+	implementation 'xerces:xercesImpl:2.12.2'
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
