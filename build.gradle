@@ -28,7 +28,7 @@ ext['log4j2.version'] = '2.17.1'
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	//JasperReport Library
-	implementation 'net.sf.jasperreports:jasperreports:6.21.0'
+	implementation 'net.sf.jasperreports:jasperreports:6.21.2'
 	// https://mvnrepository.com/artifact/com.github.librepdf/openpdf
 	// for jasperreports
 	implementation 'com.github.librepdf:openpdf:1.3.39'
