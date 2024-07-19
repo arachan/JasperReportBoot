@@ -68,7 +68,7 @@ public class pdfController {
      */    
 	@GetMapping(path = "pdf/{jrxml}")
 	@ResponseBody
-    public void getPdf(@PathVariable String jrxml,@RequestParam("no") Optional<Integer> no,@RequestParam("date") Optional<Date> date, HttpServletResponse response) throws IOException, JRException, ClassNotFoundException, SQLException{
+    public void getPdf(@PathVariable("jrxml") String jrxml,@RequestParam("no") Optional<Integer> no,@RequestParam("date") Optional<Date> date, HttpServletResponse response) throws IOException, JRException, ClassNotFoundException, SQLException{
 		Resource resource = context.getResource("classpath:jasperreports/"+jrxml+".jrxml");
         //Compile to jasperReport
         InputStream inputStream = resource.getInputStream();
