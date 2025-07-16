@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Simple_Report" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="734fe629-d5df-4bac-ad7a-39df34992f00">
-	<style name="Sans_Normal" isDefault="true" fontName="ipaexm" fontSize="14" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="Simple_Report" language="java" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="734fe629-d5df-4bac-ad7a-39df34992f00">
+	<style name="Sans_Normal" default="true" fontName="ipaexm" fontSize="14.0" bold="false" italic="false" underline="false" strikeThrough="false"/>
 	<parameter name="no" class="java.lang.Integer"/>
 	<parameter name="date" class="java.sql.Date">
 		<defaultValueExpression><![CDATA[$P{date}]]></defaultValueExpression>
@@ -10,59 +9,34 @@
 	<parameter name="enddate" class="java.util.Date"/>
 	<detail>
 		<band height="129" splitType="Stretch">
-			<staticText>
-				<reportElement x="310" y="2" width="160" height="20" uuid="33bc60c5-4a96-466c-a1dd-c613c10c23d8"/>
-				<textElement>
-					<font fontName="ipaexm"/>
-				</textElement>
+			<element kind="staticText" uuid="33bc60c5-4a96-466c-a1dd-c613c10c23d8" x="310" y="2" width="160" height="20" fontName="ipaexm">
 				<text><![CDATA[こんにちは World!]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="79" y="0" width="70" height="20" uuid="3dc2a938-28df-4208-ab00-982d243cd723"/>
-				<textFieldExpression><![CDATA[$P{no}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="0" y="0" width="70" height="20" uuid="115d7941-6f85-4551-9a93-32761366831d"/>
-				<textElement>
-					<font fontName="ipaexm"/>
-				</textElement>
+			</element>
+			<element kind="textField" uuid="3dc2a938-28df-4208-ab00-982d243cd723" x="79" y="0" width="70" height="20">
+				<expression><![CDATA[$P{no}]]></expression>
+			</element>
+			<element kind="staticText" uuid="115d7941-6f85-4551-9a93-32761366831d" x="0" y="0" width="70" height="20" fontName="ipaexm">
 				<text><![CDATA[Input No.]]></text>
-			</staticText>
-			<textField pattern="yyyy/MM/dd">
-				<reportElement x="80" y="24" width="100" height="20" uuid="c98b99ab-e54e-4c95-8ea7-fac826931f58"/>
-				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
-			</textField>
-			<textField pattern="yyyy/MM/dd">
-				<reportElement x="80" y="62" width="100" height="20" uuid="8483ad1c-2bda-40ff-97e0-4137f1bd5422"/>
-				<textFieldExpression><![CDATA[$P{startdate}]]></textFieldExpression>
-			</textField>
-			<textField pattern="yyyy/MM/dd">
-				<reportElement x="80" y="90" width="100" height="20" uuid="ff2382ab-b8c6-4425-b49c-85911628ca7b">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<textFieldExpression><![CDATA[$P{enddate}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="0" y="25" width="70" height="20" uuid="68134f34-942c-42a8-b902-d0ca07a72cbb"/>
-				<textElement>
-					<font fontName="ipaexm"/>
-				</textElement>
+			</element>
+			<element kind="textField" uuid="c98b99ab-e54e-4c95-8ea7-fac826931f58" x="80" y="24" width="100" height="20" pattern="yyyy/MM/dd">
+				<expression><![CDATA[$P{date}]]></expression>
+			</element>
+			<element kind="textField" uuid="8483ad1c-2bda-40ff-97e0-4137f1bd5422" x="80" y="62" width="100" height="20" pattern="yyyy/MM/dd">
+				<expression><![CDATA[$P{startdate}]]></expression>
+			</element>
+			<element kind="textField" uuid="ff2382ab-b8c6-4425-b49c-85911628ca7b" x="80" y="90" width="100" height="20" pattern="yyyy/MM/dd">
+				<expression><![CDATA[$P{enddate}]]></expression>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="staticText" uuid="68134f34-942c-42a8-b902-d0ca07a72cbb" x="0" y="25" width="70" height="20" fontName="ipaexm">
 				<text><![CDATA[Input Date]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="3" y="62" width="70" height="20" uuid="c69e69bb-0241-4e45-ade7-294111b9148a"/>
-				<textElement>
-					<font fontName="ipaexm"/>
-				</textElement>
+			</element>
+			<element kind="staticText" uuid="c69e69bb-0241-4e45-ade7-294111b9148a" x="3" y="62" width="70" height="20" fontName="ipaexm">
 				<text><![CDATA[start date]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="3" y="87" width="70" height="20" uuid="d13c60a3-e8b4-4aca-9a41-97201fdc783e"/>
-				<textElement>
-					<font fontName="ipaexm"/>
-				</textElement>
+			</element>
+			<element kind="staticText" uuid="d13c60a3-e8b4-4aca-9a41-97201fdc783e" x="3" y="87" width="70" height="20" fontName="ipaexm">
 				<text><![CDATA[end date]]></text>
-			</staticText>
+			</element>
 		</band>
 	</detail>
 </jasperReport>
