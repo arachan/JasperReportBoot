@@ -33,7 +33,7 @@ dependencies {
 	implementation group: 'net.sf.jasperreports', name: 'jasperreports-pdf', version: '7.0.3'
 	// https://mvnrepository.com/artifact/com.github.librepdf/openpdf
 	// for jasperreports
-	implementation 'com.github.librepdf:openpdf:2.2.4'
+	implementation 'com.github.librepdf:openpdf:2.4.0'
 	// DejaVu Font extensions
 	// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts
 	implementation 'net.sf.jasperreports:jasperreports-fonts:7.0.3'
