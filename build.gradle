@@ -64,5 +64,5 @@ test {
 
 //fully executable On Unix like platforms
 bootJar {
-	launchScript{}
+	launchScript()
 }
