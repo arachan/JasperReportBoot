@@ -30,7 +30,7 @@ dependencies {
 	//JasperReport Library
 	implementation 'net.sf.jasperreports:jasperreports:7.0.3'
 	// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-pdf
-	implementation group: 'net.sf.jasperreports', name: 'jasperreports-pdf', version: '7.0.3'
+	implementation 'net.sf.jasperreports:jasperreports-pdf:7.0.3'
 	// DejaVu Font extensions
 	// https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports-fonts
 	implementation 'net.sf.jasperreports:jasperreports-fonts:7.0.3'
