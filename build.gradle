@@ -61,3 +61,7 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+tasks.named('bootJar') {
+    launchScript()
+}
