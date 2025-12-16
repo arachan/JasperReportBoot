@@ -60,8 +60,3 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
-
-//fully executable On Unix like platforms
-bootJar {
-	launchScript{}
-}
